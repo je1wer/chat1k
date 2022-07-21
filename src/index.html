@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chaos</title>
+  </head>
+  <body>
+    <div id="file-manager" class="modal hidden">
+      <section id="droparea">
+        <span class="droparea_text">Drop your files here!</span>
+      </section>
+      <span class="droparea_text">Or choose a file directly...</span><br />
+      <input type="file" id="chat-file" />
+    </div>
+
+    <div id="secret-modal" class="modal hidden">
+      <span class="droparea_text">Secret Key</span>
+      <input type="text" id="secret" />
+    </div>
+
+    <div class="container">
+      <div class="container_header">
+        <div class="circle" style="background-color: #f00"></div>
+        <div class="circle" style="background-color: #ff00ff"></div>
+        <div class="circle" style="background-color: #ffff00"></div>
+      </div>
+
+      <div class="main">
+        <div class="main_form">
+          <h1 class="main_form_header">Enter a name</h1>
+          <span class="error_message invisible"
+            >This username has already been taken</span
+          >
+          <input type="text" id="main-form-input" />
+          <button class="main_form_button" id="continue-btn">Continue</button>
+        </div>
+
+        <!-- toggle hide -->
+        <div class="main_container hidden">
+          <aside class="user_list">
+            <img src="img/index.svg" class="loading" />
+          </aside>
+
+          <div class="chat_container">
+            <img src="img/refresh.png" id="refresh" />
+            <div class="chat"></div>
+            <div class="chat_tools">
+              <input
+                type="text"
+                id="send-message"
+                placeholder="Type your message here..."
+              />
+              <img src="img/clip.png" id="clip" />
+              <img src="img/lock.png" id="lock" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="blackout" class="hidden"></div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
